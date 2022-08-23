@@ -111,7 +111,7 @@ function alternarColorTema() {
 /* --------------------- PUNTO 5: Escribe tu codigo aqui --------------------- */
 const aparecer = document.getElementById("sobre-mi");
 window.addEventListener("keypress", (e) => {
-  if (e.key == "f" || e.key == "F") {
+  if (e.key == "f") {
     aparecer.classList.remove("oculto");
   }
 });
