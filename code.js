@@ -33,11 +33,17 @@ const cambiarTema = document.querySelector("#cambiar-tema");
 profileBtn.addEventListener("click", renderizarDatosUsuario);
 materiasBtn.addEventListener("click", recorrerListadoYRenderizarTarjetas);
 cambiarTema.addEventListener("click", alternarColorTema);
+/* --------------------------- NO TOCAR HASTA ACÁ --------------------------- */
 
 function obtenerDatosDelUsuario() {
+  /* --------------- PUNTO 1: Escribe tu codigo a partir de aqui --------------- */
+
   datosPersona.nombre = prompt("Ingresa tu nombre");
 
   datosPersona.edad = parseInt(prompt("Ingresa el año en que naciste"));
+  while (isNaN(datosPersona.edad)) {
+    datosPersona.edad = prompt("Ingresa un año correcto");
+  }
 
   datosPersona.ciudad = prompt("Ingresa la ciudad donde vives");
 
@@ -45,8 +51,9 @@ function obtenerDatosDelUsuario() {
 }
 
 function renderizarDatosUsuario() {
+  /* ------------------- NO TOCAR NI ELIMINAR ESTA FUNCION. ------------------- */
   obtenerDatosDelUsuario();
-
+  /* --------------- PUNTO 2: Escribe tu codigo a partir de aqui --------------- */
   const nombre = document.querySelector("#nombre");
   nombre.innerHTML = datosPersona.nombre;
 
@@ -66,6 +73,7 @@ function renderizarDatosUsuario() {
 
 let contador = 0;
 function recorrerListadoYRenderizarTarjetas() {
+  /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
   if (contador == 0) {
     const todosLosItems = [];
     const fila = document.querySelector("#fila");
@@ -95,12 +103,14 @@ function recorrerListadoYRenderizarTarjetas() {
 }
 
 function alternarColorTema() {
+  /* --------------------- PUNTO 4: Escribe tu codigo aqui --------------------- */
   const sitio = document.querySelector("#sitio");
   sitio.classList.toggle("dark");
 }
 
+/* --------------------- PUNTO 5: Escribe tu codigo aqui --------------------- */
 const aparecer = document.getElementById("sobre-mi");
-window.addEventListener("keypress", function (e) {
+window.addEventListener("keypress", (e) => {
   if (e.key == "f") {
     aparecer.classList.remove("oculto");
   }
