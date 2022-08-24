@@ -41,7 +41,8 @@ function obtenerDatosDelUsuario() {
   datosPersona.nombre = prompt("Ingresa tu nombre");
 
   datosPersona.edad = parseInt(prompt("Ingresa el año en que naciste"));
-  while (isNaN(datosPersona.edad)) {
+
+  while (isNaN(datosPersona.edad)|| (datosPersona.edad < 1920 || datosPersona.edad >2022) ) {
     datosPersona.edad = prompt("Ingresa un año correcto");
   }
 
